@@ -1,6 +1,16 @@
 function NamedOne(first, last) {
-// -- SHOULD be changed --
     this.firstName = first;
     this.lastName = last;
-    this.fullName = this.firstName + ' ' + this.lastName;
+    this.fullName = function () {
+      
+      return `${this.firstName} ${this.lastName}` 
+    }
 }
+
+let named = new NamedOne("Mikołaj", "Walanus");
+
+named.firstName = "miki";
+named.fullName();
+// named.firstName;
+
+
